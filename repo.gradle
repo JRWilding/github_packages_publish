@@ -1,10 +1,10 @@
 repositories {
   maven {
     name = "GitHubPackages"
-    url = uri("https://maven.pkg.github.com/${GITHUB_PUBLISH_OWNER}/${GITHUB_PUBLISH_REPOSITORY}")
+    url = uri("https://maven.pkg.github.com/${GITHUB_PACKAGES_OWNER}/${GITHUB_PACKAGES_REPOSITORY}")
     credentials {
-      username = project.findProperty("githubPublishUser") ?: System.getenv("GITHUB_PUBLISH_USER")
-      password = project.findProperty("githubPublishKey") ?: System.getenv("GITHUB_PUBLISH_KEY")
+      username = project.findProperty("GITHUB_PACKAGES_USER") ?: System.getenv("GITHUB_PACKAGES_USER")
+      password = project.findProperty("GITHUB_PACKAGES_TOKEN") ?: System.getenv("GITHUB_PACKAGES_TOKEN")
     }
   }
 }
