@@ -29,4 +29,5 @@ publishing {
         password = project.findProperty("GITHUB_PACKAGES_TOKEN") ?: System.getenv("GITHUB_PACKAGES_TOKEN")
       }
     }
+  }
 }
